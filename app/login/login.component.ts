@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginResponse } from '../shared/models/login-response';
-import { ApplicationContext } from '../shared/services/application-context.service';
+import { ApplicationContext } from '../shared/services/application-context';
 import { AuthService } from '../shared/services/auth.service';
 
 /* ***********************************************************
