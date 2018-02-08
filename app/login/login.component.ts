@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginResponse } from '../shared/models/login-response';
+import { ApplicationContext } from '../shared/services/application-context.service';
 import { AuthService } from '../shared/services/auth.service';
 
 /* ***********************************************************
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
     username: string;
     password: string;
 
-    constructor(private auth: AuthService, private router: Router) {
+    constructor(private auth: AuthService, private router: Router,
+                private applicationContext: ApplicationContext) {
         /* ***********************************************************
         * Use the constructor to inject app services that you need in this component.
         *************************************************************/
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
         const password = this.password;
         this.auth.login(userName, password).subscribe(
             (data: LoginResponse) => {
-                console.log('Response', JSON.stringify(data));
+                this.applicationContext.storeProfile(data);
                 this.router.navigate(['/home']);
             },
             (error) => {},

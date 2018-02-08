@@ -26,7 +26,7 @@ export class AuthService {
         });
         const options = {headers};
 
-        return this.http.post<LoginResponse>(Config.apiUrl + '/oauth/token',
+        return this.http.post<LoginResponse>('/oauth/token',
             'grant_type=password&scope=read%20write&username=' + username + '&password=' + password,
             options);
     }
