@@ -1,4 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginResponse } from '../shared/models/login-response';
+import { AuthService } from '../shared/services/auth.service';
 
 /* ***********************************************************
 * Before you can navigate to this page from your app, you need to reference this page's module in the
@@ -8,15 +11,15 @@ import { Component, OnInit } from "@angular/core";
 *************************************************************/
 
 @Component({
-    selector: "Login",
+    selector: 'Login',
     moduleId: module.id,
-    templateUrl: "./login.component.html"
+    templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-    email: string;
+    username: string;
     password: string;
 
-    constructor() {
+    constructor(private auth: AuthService, private router: Router) {
         /* ***********************************************************
         * Use the constructor to inject app services that you need in this component.
         *************************************************************/
@@ -29,21 +32,17 @@ export class LoginComponent implements OnInit {
         *************************************************************/
     }
 
-    onLoginWithSocialProviderButtonTap(): void {
-        /* ***********************************************************
-        * For log in with social provider you can add your custom logic or
-        * use NativeScript plugin for log in with Facebook
-        * http://market.nativescript.org/plugins/nativescript-facebook
-        *************************************************************/
-    }
-
     onSigninButtonTap(): void {
-        const email = this.email;
+        const userName = this.username;
         const password = this.password;
-
-        /* ***********************************************************
-        * Call your custom sign in logic using the email and password data.
-        *************************************************************/
+        this.auth.login(userName, password).subscribe(
+            (data: LoginResponse) => {
+                console.log('Response', JSON.stringify(data));
+                this.router.navigate(['/home']);
+            },
+            (error) => {},
+            () => {}
+        );
     }
 
     onForgotPasswordTap(): void {

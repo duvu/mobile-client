@@ -1,14 +1,16 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptCommonModule } from "nativescript-angular/common";
-import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NativeScriptFormsModule} from 'nativescript-angular';
+import { NativeScriptCommonModule } from 'nativescript-angular/common';
+import { NativeScriptUISideDrawerModule } from 'nativescript-pro-ui/sidedrawer/angular';
 
-import { MyDrawerItemComponent } from "./my-drawer-item/my-drawer-item.component";
-import { MyDrawerComponent } from "./my-drawer/my-drawer.component";
+import { MyDrawerItemComponent } from './my-drawer-item/my-drawer-item.component';
+import { MyDrawerComponent } from './my-drawer/my-drawer.component';
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        NativeScriptFormsModule
     ],
     declarations: [
         MyDrawerComponent,
@@ -16,7 +18,8 @@ import { MyDrawerComponent } from "./my-drawer/my-drawer.component";
     ],
     exports: [
         MyDrawerComponent,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        NativeScriptFormsModule
     ],
     schemas: [
         NO_ERRORS_SCHEMA
