@@ -17,6 +17,7 @@ import { AuthService } from '../shared/services/auth.service';
     templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
+    isLoading: boolean;
     username: string;
     password: string;
 
@@ -29,21 +30,25 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        /* ***********************************************************
-        * Use the "ngOnInit" handler to initialize data for this component.
-        *************************************************************/
+        this.isLoading = false;
     }
 
     onSigninButtonTap(): void {
         const userName = this.username;
         const password = this.password;
+        this.isLoading = true;
         this.auth.login(userName, password).subscribe(
             (data: LoginResponse) => {
                 this.applicationContext.storeProfile(data);
+                this.isLoading = false;
                 this.router.navigate(['/home']);
             },
-            (error) => {},
-            () => {}
+            (error) => {
+                this.isLoading = false;
+            },
+            () => {
+                this.isLoading = false;
+            }
         );
     }
 
