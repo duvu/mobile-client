@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var common_1 = require("nativescript-angular/common");
-var shared_module_1 = require("../shared/shared.module");
+var shared_module_1 = require("../../shared/shared.module");
 var featured_routing_module_1 = require("./featured-routing.module");
 var featured_component_1 = require("./featured.component");
 var FeaturedModule = /** @class */ (function () {

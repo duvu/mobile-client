@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var common_1 = require("nativescript-angular/common");
-var shared_module_1 = require("../shared/shared.module");
+var shared_module_1 = require("../../shared/shared.module");
 var browse_routing_module_1 = require("./browse-routing.module");
 var browse_component_1 = require("./browse.component");
 var BrowseModule = /** @class */ (function () {

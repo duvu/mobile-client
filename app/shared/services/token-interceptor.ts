@@ -16,7 +16,7 @@ export class TokenInterceptor implements HttpInterceptor {
                 {url: Config.apiUrl + req.url}
             )); // forward
         } else {
-            const token = this.applicationContext.token;
+            const token = ('bearer' + this.applicationContext.token);
             return next.handle(req.clone(
                 {
                     url: Config.apiUrl + req.url,

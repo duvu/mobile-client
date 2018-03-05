@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApplicationContext } from './shared/services/application-context';
 import { AuthService } from './shared/services/auth.service';
-import { TokenInterceptor } from './shared/services/TokenInterceptor';
+import {EventService} from './shared/services/event.service';
+import { TokenInterceptor } from './shared/services/token-interceptor';
 
 @NgModule({
     bootstrap: [
@@ -28,6 +29,7 @@ import { TokenInterceptor } from './shared/services/TokenInterceptor';
     ],
     providers: [
         AuthService,
+        EventService,
         ApplicationContext,
         {
             provide: HTTP_INTERCEPTORS,

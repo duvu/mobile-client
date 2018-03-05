@@ -18,8 +18,8 @@ import { AuthService } from '../shared/services/auth.service';
 })
 export class LoginComponent implements OnInit {
     isLoading: boolean;
-    username: string;
-    password: string;
+    username: string = 'sysadmin';
+    password: string = '123456';
 
     constructor(private auth: AuthService, private router: Router,
                 private applicationContext: ApplicationContext) {
