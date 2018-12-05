@@ -1,1 +1,5 @@
-{"appId":"com.gpshandle.Mobileclient","minSdkVersion":null,"targetSdkVersion":null}
+{
+  "appId": "com.gpshandle.Mobileclient",
+  "minSdkVersion": 24,
+  "targetSdkVersion": 27
+}

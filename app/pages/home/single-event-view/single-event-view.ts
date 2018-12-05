@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-    selector: 'single-event-view',
+    selector: 'SingleEventView',
     moduleId: module.id,
     templateUrl: './single-event-view.html'
 })

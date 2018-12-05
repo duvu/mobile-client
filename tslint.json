@@ -43,6 +43,7 @@
       "singleline": "never"
     }],
     "variable-name": false,
+    "ordered-imports": false,
     "no-empty": false,
     "quotemark": [true, "single"],
     "triple-equals": false,

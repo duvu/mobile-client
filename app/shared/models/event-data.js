@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Created by beou on 6/2/17.
+ */
+var EventData = /** @class */ (function () {
+    function EventData() {
+    }
+    return EventData;
+}());
+exports.EventData = EventData;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXZlbnQtZGF0YS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImV2ZW50LWRhdGEudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7R0FFRztBQUNIO0lBQUE7SUFjQSxDQUFDO0lBQUQsZ0JBQUM7QUFBRCxDQUFDLEFBZEQsSUFjQztBQWRZLDhCQUFTIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBDcmVhdGVkIGJ5IGJlb3Ugb24gNi8yLzE3LlxuICovXG5leHBvcnQgY2xhc3MgRXZlbnREYXRhIHtcbiAgICBpZDogbnVtYmVyO1xuICAgIGNvbXBhbnlJZDogbnVtYmVyOyAvLyBjb21wYW55LWlkIGluIGRiXG4gICAgY29tcGFueU5hbWU6IHN0cmluZztcbiAgICBkZXZJZDogbnVtYmVyOyAvLyBkZXZpY2UtaWQgaW4gZGJcbiAgICBkZXZpY2VJZDogc3RyaW5nO1xuICAgIGRldmljZU5hbWU6IHN0cmluZztcbiAgICBsYXRpdHVkZTogbnVtYmVyO1xuICAgIGxvbmdpdHVkZTogbnVtYmVyO1xuICAgIGFsdGl0dWRlOiBudW1iZXI7XG4gICAgYWRkcmVzczogc3RyaW5nO1xuICAgIHRpbWVzdGFtcDogbnVtYmVyO1xuICAgIHNwZWVkS1BIOiBudW1iZXI7XG4gICAgaGVhZGluZzogbnVtYmVyO1xufVxuIl19

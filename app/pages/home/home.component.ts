@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DrawerTransitionBase, SlideInOnTopTransition } from 'nativescript-pro-ui/sidedrawer';
-import { RadSideDrawerComponent } from 'nativescript-pro-ui/sidedrawer/angular';
-import {EventData} from '../../shared/models/event-data';
-import { EventService} from '../../shared/services/event.service';
+import { DrawerTransitionBase, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
+import { RadSideDrawerComponent } from 'nativescript-ui-sidedrawer/angular';
+import { EventData } from '../../shared/models/event-data';
+import { EventService } from '../../shared/services/event.service';
 
 @Component({
     selector: 'Home',

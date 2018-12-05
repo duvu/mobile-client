@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
 
 /* ***********************************************************
 * Keep data that is displayed in your app drawer in the MyDrawer component class.
 * Add new data objects that you want to display in the drawer here in the form of properties.
 *************************************************************/
 @Component({
-    selector: "MyDrawer",
+    selector: 'MyDrawer',
     moduleId: module.id,
-    templateUrl: "./my-drawer.component.html",
-    styleUrls: ["./my-drawer.component.scss"]
+    templateUrl: './my-drawer.component.html',
+    styleUrls: ['./my-drawer.component.scss']
 })
 export class MyDrawerComponent implements OnInit {
     /* ***********************************************************
